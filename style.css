@@ -1,0 +1,118 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+header {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+    font-size: 32px;
+}
+
+header p {
+    margin: 0;
+}
+
+nav {
+    background: white;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+nav a {
+    display: inline-block;
+    margin: 5px 10px;
+    color: #111827;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1000px;
+	}
+.cartoes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+article {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+article h2,
+article h3 {
+    margin-top: 0;
+}
+
+article p {
+    line-height: 1.6;
+}
+
+article a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
+
+.pesquisa {
+    margin-bottom: 25px;
+}
+
+.pesquisa input {
+    width: 70%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.pesquisa button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#resultados {
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    nav a {
+        display: block;
+    }
+
+    .pesquisa input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .pesquisa button {
+        width: 100%;
+    }
+}
