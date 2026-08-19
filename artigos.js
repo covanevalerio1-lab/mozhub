@@ -4,7 +4,7 @@
         id: 3,
         titulo: "Como usar Inteligência Artificial para estudar melhor: guia completo para estudantes",
         categoria: "Tecnologia & IA",
-imagem: "imagens/ia-estudantes.jpg",
+		imagem: "ia-estudantes.jpg",
         resumo: "Aprenda a usar ferramentas de IA para entender matérias, fazer exercícios, pesquisar, revisar e organizar os estudos sem deixar a tecnologia pensar por você.",
 
         conteudo:
@@ -87,7 +87,7 @@ imagem: "imagens/ia-estudantes.jpg",
         id: 1,
         titulo: "Como encontrar empregos, bolsas e outras oportunidades na internet",
         categoria: "Oportunidades",
-imagem: "imagens/oportunidades.jpg",
+imagem: "oportunidades.jpg",
         resumo: "Um guia prático para procurar vagas, bolsas, cursos e oportunidades online com mais segurança.",
 
         conteudo:
@@ -145,7 +145,7 @@ imagem: "imagens/oportunidades.jpg",
         id: 2,
         titulo: "Como aprender programação do zero: caminho completo para começar",
         categoria: "Educação",
-imagem: "imagens/programacao.jpg",
+imagem: "programacao.jpg",
         resumo: "Descubra por onde começar, o que estudar primeiro, como praticar e como evitar os erros que fazem iniciantes desistirem.",
 
         conteudo:
@@ -202,7 +202,7 @@ imagem: "imagens/programacao.jpg",
         id: 4,
         titulo: "Como começar um pequeno negócio: guia para transformar uma ideia em negócio",
         categoria: "Dinheiro & Negócios",
-imagem: "imagens/negocios.jpg",
+imagem: "negocios.jpg",
         resumo: "Aprenda a testar uma ideia, calcular custos, definir preços, encontrar clientes e evitar investir dinheiro antes de validar a procura.",
 
         conteudo:
