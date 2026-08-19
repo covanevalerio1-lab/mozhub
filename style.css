@@ -1,118 +1,498 @@
-﻿* {
+﻿/* ==============================
+   MOZHUB - DESIGN PRINCIPAL
+   ============================== */
+
+* {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f6f8;
-    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f6fa;
+    color: #1f2937;
+    line-height: 1.7;
 }
 
+/* ==============================
+   CABEÇALHO
+   ============================== */
+
 header {
-    background: #111827;
+    background:
+        linear-gradient(135deg, #0f172a, #1e3a8a);
     color: white;
     text-align: center;
-    padding: 30px 20px;
+    padding: 55px 20px 45px;
 }
 
 header h1 {
-    margin: 0 0 10px 0;
-    font-size: 32px;
+    margin: 0;
+    font-size: 52px;
+    letter-spacing: -1px;
+    font-weight: 800;
 }
 
 header p {
-    margin: 0;
+    margin: 12px auto 0;
+    max-width: 650px;
+    font-size: 18px;
+    opacity: 0.9;
 }
 
+/* ==============================
+   MENU
+   ============================== */
+
 nav {
-    background: white;
-    padding: 15px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    padding: 14px 15px;
+
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid #e5e7eb;
+
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.06);
 }
 
 nav a {
-    display: inline-block;
-    margin: 5px 10px;
-    color: #111827;
+    color: #334155;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700;
+    padding: 9px 14px;
+    border-radius: 20px;
+    transition: 0.2s ease;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    background: #e8eefc;
+    color: #1d4ed8;
 }
+
+/* ==============================
+   ÁREA PRINCIPAL
+   ============================== */
 
 main {
-    max-width: 1000px;
-	}
-.cartoes {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-article {
-    background: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 35px 20px 60px;
 }
 
-article h2,
-article h3 {
-    margin-top: 0;
-}
-
-article p {
-    line-height: 1.6;
-}
-
-article a {
-    color: #2563eb;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-article a:hover {
-    text-decoration: underline;
-}
+/* ==============================
+   PESQUISA
+   ============================== */
 
 .pesquisa {
-    margin-bottom: 25px;
+    display: flex;
+    max-width: 850px;
+    margin: 0 auto 38px;
+    gap: 10px;
 }
 
 .pesquisa input {
-    width: 70%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    flex: 1;
+    min-width: 0;
+
+    padding: 15px 18px;
+
+    font-size: 16px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+
+    outline: none;
+    background: white;
+
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.05);
+
+    transition: 0.2s ease;
+}
+
+.pesquisa input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
 }
 
 .pesquisa button {
-    padding: 12px 18px;
+    padding: 15px 22px;
+
     border: none;
-    border-radius: 5px;
+    border-radius: 12px;
+
+    background: #2563eb;
+    color: white;
+
+    font-weight: 700;
+    font-size: 15px;
+
     cursor: pointer;
-    font-weight: bold;
+
+    transition: 0.2s ease;
 }
 
+.pesquisa button:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+/* ==============================
+   TÍTULOS DAS SEÇÕES
+   ============================== */
+
+.destaque h2 {
+    margin: 0 0 22px;
+    font-size: 30px;
+    color: #111827;
+}
+
+/* ==============================
+   CARTÕES
+   ============================== */
+
+.cartoes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.cartoes article {
+    position: relative;
+
+    background: white;
+
+    padding: 28px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.cartoes article:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 16px 35px rgba(15, 23, 42, 0.12);
+}
+
+.cartoes article h3 {
+    margin: 0 0 10px;
+    font-size: 23px;
+    color: #111827;
+}
+
+.cartoes article p {
+    margin: 0 0 17px;
+    color: #64748b;
+}
+
+.cartoes article a {
+    display: inline-block;
+
+    color: #2563eb;
+    text-decoration: none;
+
+    font-weight: 700;
+}
+
+.cartoes article a:hover {
+    text-decoration: underline;
+}
+
+/* ==============================
+   RESULTADOS DA PESQUISA
+   ============================== */
+
 #resultados {
-    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+#resultados article {
+    background: white;
+
+    margin-bottom: 18px;
+    padding: 24px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 15px;
+
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.05);
+}
+
+#resultados article h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+#resultados article p {
+    color: #64748b;
+}
+
+#resultados article a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* ==============================
+   PÁGINA DO ARTIGO
+   ============================== */
+
+.pagina-artigo {
+    max-width: 850px;
+    margin: 0 auto;
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+}
+
+/* ==============================
+   CAPA DO ARTIGO
+   ============================== */
+
+.capa-artigo {
+    width: 100%;
+    background: #e5e7eb;
+    overflow: hidden;
+}
+
+.capa-artigo img {
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 3 / 2;
+
+    object-fit: cover;
+}
+
+/* ==============================
+   INFORMAÇÕES DO ARTIGO
+   ============================== */
+
+.informacoes-artigo {
+    padding: 35px 40px 10px;
+}
+
+.informacoes-artigo #categoria {
+    display: inline-block;
+
+    margin: 0 0 15px;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    background: #e8eefc;
+    color: #1d4ed8;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.informacoes-artigo h2 {
+    margin: 0 0 15px;
+
+    color: #111827;
+
+    font-size: 38px;
+    line-height: 1.2;
+}
+
+.informacoes-artigo #resumo {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 18px;
+}
+
+/* ==============================
+   CONTEÚDO
+   ============================== */
+
+.conteudo-artigo {
+    padding: 25px 40px 45px;
+}
+
+.conteudo-artigo p {
+    margin: 0 0 20px;
+    font-size: 17px;
+}
+
+.conteudo-artigo h3 {
+    margin: 35px 0 12px;
+
+    color: #111827;
+
+    font-size: 25px;
+    line-height: 1.3;
+}
+
+.conteudo-artigo ul,
+.conteudo-artigo ol {
+    padding-left: 25px;
+    margin-bottom: 22px;
+}
+
+.conteudo-artigo li {
+    margin-bottom: 9px;
+}
+
+.conteudo-artigo a {
+    color: #2563eb;
+    font-weight: 700;
+}
+
+.conteudo-artigo blockquote {
+    margin: 25px 0;
+
+    padding: 18px 22px;
+
+    border-left: 5px solid #2563eb;
+
+    background: #f8fafc;
+
+    color: #475569;
+
+    border-radius: 8px;
+}
+
+/* ==============================
+   CONTINUE APRENDENDO
+   ============================== */
+
+.proximo-conteudo {
+    margin: 10px 40px 40px;
+
+    padding: 25px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+}
+
+.proximo-conteudo h3 {
+    margin-top: 0;
+    color: #111827;
+}
+
+.proximo-conteudo p {
+    color: #64748b;
+}
+
+.proximo-conteudo a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* ==============================
+   RESPONSIVIDADE
+   ============================== */
+
+@media (max-width: 800px) {
+
+    header {
+        padding: 42px 18px 35px;
+    }
+
+    header h1 {
+        font-size: 40px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    .cartoes {
+        grid-template-columns: 1fr;
+    }
+
+    .informacoes-artigo {
+        padding: 28px 24px 10px;
+    }
+
+    .informacoes-artigo h2 {
+        font-size: 30px;
+    }
+
+    .conteudo-artigo {
+        padding: 20px 24px 35px;
+    }
+
+    .proximo-conteudo {
+        margin: 10px 24px 28px;
+    }
 }
 
 @media (max-width: 600px) {
-    nav a {
-        display: block;
+
+    nav {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
     }
 
-    .pesquisa input {
-        width: 100%;
-        margin-bottom: 10px;
+    nav a {
+        white-space: nowrap;
+    }
+
+    main {
+        padding: 25px 14px 45px;
+    }
+
+    .pesquisa {
+        flex-direction: column;
     }
 
     .pesquisa button {
         width: 100%;
+    }
+
+    header h1 {
+        font-size: 34px;
+    }
+
+    .destaque h2 {
+        font-size: 25px;
+    }
+
+    .cartoes article {
+        padding: 23px;
+    }
+
+    .informacoes-artigo h2 {
+        font-size: 27px;
+    }
+
+    .conteudo-artigo p {
+        font-size: 16px;
     }
 }
