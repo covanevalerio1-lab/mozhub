@@ -1,0 +1,6 @@
+```text
+User-agent: *
+Allow: /
+
+Sitemap: https://covanevalerio1-lab.github.io/mozhub/sitemap.xml
+```
