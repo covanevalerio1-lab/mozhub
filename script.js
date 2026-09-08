@@ -1,51 +1,82 @@
 function pesquisarArtigos() {
-
     var campo = document.getElementById("campoPesquisa");
     var resultados = document.getElementById("resultados");
-
-    var pesquisa = campo.value.toLowerCase();
+    var pesquisa = campo.value.trim().toLowerCase();
 
     resultados.innerHTML = "";
 
     if (pesquisa === "") {
-        resultados.innerHTML = "<p>Digite algo para pesquisar.</p>";
         return;
     }
 
-    var encontrados = [];
-
-    for (var i = 0; i < artigos.length; i++) {
-
-        var artigo = artigos[i];
-
-        var titulo = artigo.titulo.toLowerCase();
-        var categoria = artigo.categoria.toLowerCase();
-        var resumo = artigo.resumo.toLowerCase();
-
-        if (
-            titulo.indexOf(pesquisa) !== -1 ||
-            categoria.indexOf(pesquisa) !== -1 ||
-            resumo.indexOf(pesquisa) !== -1
-        ) {
-            encontrados.push(artigo);
-        }
-    }
+    var encontrados = artigos.filter(function (artigo) {
+        var texto = (artigo.titulo + " " + artigo.categoria + " " + artigo.resumo)
+            .toLowerCase();
+        return texto.indexOf(pesquisa) !== -1;
+    });
 
     if (encontrados.length === 0) {
-        resultados.innerHTML = "<p>Nenhum artigo encontrado.</p>";
+        var vazio = document.createElement("p");
+        vazio.textContent = "Nenhum artigo encontrado. Experimente outra palavra.";
+        resultados.appendChild(vazio);
         return;
     }
 
-    for (var j = 0; j < encontrados.length; j++) {
+    encontrados.forEach(function (item) {
+        var cartao = document.createElement("article");
+        var titulo = document.createElement("h3");
+        var categoria = document.createElement("p");
+        var resumo = document.createElement("p");
+        var link = document.createElement("a");
 
-        var item = encontrados[j];
+        titulo.textContent = item.titulo;
+        categoria.textContent = item.categoria;
+        resumo.textContent = item.resumo;
+        link.href = "artigo.html?id=" + encodeURIComponent(item.id);
+        link.textContent = "Ler artigo →";
 
-        resultados.innerHTML +=
-            "<article>" +
-                "<h3>" + item.titulo + "</h3>" +
-                "<p>" + item.categoria + "</p>" +
-                "<p>" + item.resumo + "</p>" +
-                "<a href='artigo.html?id=" + item.id + "'>Ler artigo →</a>" +
-            "</article>";
-    }
+        cartao.appendChild(titulo);
+        cartao.appendChild(categoria);
+        cartao.appendChild(resumo);
+        cartao.appendChild(link);
+        resultados.appendChild(cartao);
+    });
 }
+
+function configurarTema() {
+    var botao = document.getElementById("alternarTema");
+    if (!botao) {
+        return;
+    }
+
+    var temaGuardado = localStorage.getItem("mozhub-tema");
+    if (temaGuardado === "escuro") {
+        document.body.classList.add("tema-escuro");
+    }
+    botao.setAttribute(
+        "aria-label",
+        document.body.classList.contains("tema-escuro")
+            ? "Ativar modo claro"
+            : "Ativar modo escuro"
+    );
+
+    botao.addEventListener("click", function () {
+        var escuro = document.body.classList.toggle("tema-escuro");
+        localStorage.setItem("mozhub-tema", escuro ? "escuro" : "claro");
+        botao.setAttribute("aria-label", escuro ? "Ativar modo claro" : "Ativar modo escuro");
+    });
+}
+
+var botaoPesquisa = document.getElementById("botaoPesquisa");
+var campoPesquisa = document.getElementById("campoPesquisa");
+
+if (botaoPesquisa && campoPesquisa) {
+    botaoPesquisa.addEventListener("click", pesquisarArtigos);
+    campoPesquisa.addEventListener("keydown", function (evento) {
+        if (evento.key === "Enter") {
+            pesquisarArtigos();
+        }
+    });
+}
+
+configurarTema();

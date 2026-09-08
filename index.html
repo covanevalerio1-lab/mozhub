@@ -15,87 +15,108 @@
 
 <body>
 
-<header>
-    <h1>MozHub</h1>
-    <p>Oportunidades, conhecimento e tecnologia para Moçambique</p>
+<header class="hero">
+<div class="hero-conteudo">
+<p class="eyebrow">MOZHUB · APRENDER E CRESCER</p>
+<h1>O conhecimento que abre caminhos.</h1>
+<p>Oportunidades, educação, tecnologia e negócios explicados de forma prática para Moçambique.</p>
+<a class="botao-hero" href="#conteudos">Explorar conteúdos <span aria-hidden="true">↓</span></a>
+</div>
 </header>
 
 <nav>
-    <a href="index.html">Início</a>
-    <a href="#">Oportunidades</a>
-    <a href="#">Educação</a>
-    <a href="#">Tecnologia & IA</a>
-    <a href="#">Dinheiro & Negócios</a>
+<a href="index.html">Início</a>
+<a href="oportunidades.html">Oportunidades</a>
+<a href="educacao.html">Educação</a>
+<a href="tecnologia-ia.html">Tecnologia & IA</a>
+<a href="dinheiro-negocios.html">Dinheiro & Negócios</a>
+<button id="alternarTema" class="botao-tema" type="button" aria-label="Ativar modo escuro">◐</button>
 </nav>
 
 <main>
 
-    <section class="pesquisa">
-        <input
-            type="text"
-            id="campoPesquisa"
-            placeholder="Pesquisar no MozHub..."
-        >
+<section class="pesquisa">
+    <label class="sr-only" for="campoPesquisa">Pesquisar conteúdos</label>
+    <input
+        type="text"
+        id="campoPesquisa"
+        placeholder="Pesquisar por tema, palavra ou categoria..."
+        autocomplete="off"
+    >
 
-        <button onclick="pesquisarArtigos()">
-            Pesquisar
-        </button>
-    </section>
+    <button id="botaoPesquisa" type="button">
+        Pesquisar
+    </button>
+</section>
 
-    <section id="resultados"></section>
+<section id="resultados" aria-live="polite"></section>
 
-    <section class="destaque">
+<section class="destaque" id="conteudos">
 
-        <h2>🔥 Conteúdos em destaque</h2>
+    <div class="titulo-secao">
+        <div>
+            <p class="eyebrow">ESCOLHA O SEU PRÓXIMO PASSO</p>
+            <h2>Conteúdos em destaque</h2>
+        </div>
+        <p class="contador">4 áreas para aprender, aplicar e avançar.</p>
+    </div>
 
         <div class="cartoes">
 
             <article>
-                <h3>Oportunidades</h3>
-
-                <p>
-                    Encontre vagas, bolsas, estágios, cursos e outras oportunidades.
-                </p>
-
-                <a href="artigo.html?id=1">
-                    Explorar →
-                </a>
+                <img class="imagem-cartao" src="oportunidades.jpg" alt="Pessoa a pesquisar oportunidades num computador" loading="lazy">
+                <div class="conteudo-cartao">
+                    <span class="etiqueta-cartao">CARREIRA</span>
+                    <h3>Oportunidades</h3>
+                    <p>Encontre vagas, bolsas, estágios e cursos com um método simples para pesquisar, verificar e candidatar-se.</p>
+                    <div class="mini-demonstracao" aria-label="Exemplo de pesquisa de oportunidade">
+                        <span>🔎 estágio</span><span>📍 Moçambique</span><span>✓ fonte oficial</span>
+                    </div>
+                    <p class="exemplo-cartao"><strong>Exemplo:</strong> transforme “quero emprego” em “estágio de informática em Maputo 2026”.</p>
+                    <a href="artigo.html?id=1">Ver guia completo <span aria-hidden="true">→</span></a>
+                </div>
             </article>
 
             <article>
-                <h3>Educação</h3>
-
-                <p>
-                    Recursos para estudar, aprender novas habilidades e crescer.
-                </p>
-
-                <a href="artigo.html?id=2">
-                    Explorar →
-                </a>
+                <img class="imagem-cartao" src="programacao.jpg" alt="Estudante a aprender programação num laptop" loading="lazy">
+                <div class="conteudo-cartao">
+                    <span class="etiqueta-cartao">APRENDIZAGEM</span>
+                    <h3>Educação</h3>
+                    <p>Recursos para estudar melhor, aprender novas habilidades e transformar conhecimento em projectos.</p>
+                    <div class="mini-demonstracao passos" aria-label="Exemplo de rotina de estudo">
+                        <span>1. Entender</span><span>2. Praticar</span><span>3. Rever</span>
+                    </div>
+                    <p class="exemplo-cartao"><strong>Exemplo:</strong> estude HTML, crie uma página e explique com as suas palavras o que construiu.</p>
+                    <a href="artigo.html?id=2">Começar a aprender <span aria-hidden="true">→</span></a>
+                </div>
             </article>
 
             <article>
-                <h3>Tecnologia & IA</h3>
-
-                <p>
-                    Ferramentas, inteligência artificial, programação e tecnologia prática.
-                </p>
-
-                <a href="artigo.html?id=3">
-                    Explorar →
-                </a>
+                <img class="imagem-cartao" src="ia-estudantes.jpg" alt="Estudante a usar inteligência artificial para estudar" loading="lazy">
+                <div class="conteudo-cartao">
+                    <span class="etiqueta-cartao">INOVAÇÃO</span>
+                    <h3>Tecnologia & IA</h3>
+                    <p>Descubra ferramentas digitais, programação e inteligência artificial para resolver problemas reais.</p>
+                    <div class="mini-demonstracao codigo" aria-label="Exemplo de pedido à inteligência artificial">
+                        <span>Contexto</span><b>+</b><span>Objectivo</span><b>+</b><span>Prática</span>
+                    </div>
+                    <p class="exemplo-cartao"><strong>Exemplo:</strong> peça uma explicação simples, tente sozinho e use a IA apenas para corrigir o seu erro.</p>
+                    <a href="artigo.html?id=3">Explorar tecnologia <span aria-hidden="true">→</span></a>
+                </div>
             </article>
 
             <article>
-                <h3>Dinheiro & Negócios</h3>
-
-                <p>
-                    Ideias, ferramentas e conhecimentos para criar e melhorar negócios.
-                </p>
-
-                <a href="artigo.html?id=4">
-                    Explorar →
-                </a>
+                <img class="imagem-cartao" src="negocios.jpg" alt="Empreendedor a planear um pequeno negócio" loading="lazy">
+                <div class="conteudo-cartao">
+                    <span class="etiqueta-cartao">ACÇÃO</span>
+                    <h3>Dinheiro & Negócios</h3>
+                    <p>Aprenda a testar ideias, controlar custos, encontrar clientes e tomar decisões com mais confiança.</p>
+                    <div class="mini-demonstracao financas" aria-label="Exemplo de cálculo de negócio">
+                        <span>10.000 MT receita</span><b>−</b><span>7.000 MT custos</span><b>=</b><strong>3.000 MT</strong>
+                    </div>
+                    <p class="exemplo-cartao"><strong>Exemplo:</strong> antes de investir, fale com cinco potenciais clientes e teste uma versão pequena da oferta.</p>
+                    <a href="artigo.html?id=4">Ver guia de negócios <span aria-hidden="true">→</span></a>
+                </div>
             </article>
 
         </div>
@@ -103,6 +124,11 @@
     </section>
 
 </main>
+
+<footer>
+    <strong>MozHub</strong>
+    <span>Conhecimento útil para transformar ideias em ação.</span>
+</footer>
 
 <script src="artigos.js"></script>
 <script src="script.js"></script>
