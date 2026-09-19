@@ -1,137 +1,311 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt">
+
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google-site-verification" content="hBn_hFv_6rBgG6RomyeOrzKn2wprJkl54u__zzaxCpQ" />
-    <title>MozHub - Oportunidades, Educação, Tecnologia e Negócios em Moçambique</title>
 
-    <meta name="description" content="MozHub: oportunidades, educação, tecnologia, inteligência artificial, dinheiro e negócios para Moçambique.">
+    <meta
+        name="google-site-verification"
+        content="hBn_hFv_6rBgG6RomyeOrzKn2wprJkl54u__zzaxCpQ"
+    >
+
+    <title>
+        MozHub — Conhecimento, Oportunidades, Educação, Tecnologia e Negócios
+    </title>
+
+    <meta
+        name="description"
+        content="MozHub reúne guias práticos sobre oportunidades, educação, tecnologia, inteligência artificial, primeiro emprego, dinheiro e negócios em Moçambique."
+    >
+
+    <meta
+        name="keywords"
+        content="Moçambique, oportunidades, primeiro emprego, bolsas de estudo, educação, programação, inteligência artificial, dinheiro, negócios"
+    >
+
+    <meta name="author" content="MozHub">
 
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-<header class="hero">
-<div class="hero-conteudo">
-<p class="eyebrow">MOZHUB · APRENDER E CRESCER</p>
-<h1>O conhecimento que abre caminhos.</h1>
-<p>Oportunidades, educação, tecnologia e negócios explicados de forma prática para Moçambique.</p>
-<a class="botao-hero" href="#conteudos">Explorar conteúdos <span aria-hidden="true">↓</span></a>
-</div>
-</header>
 
-<nav>
-<a href="index.html">Início</a>
-<a href="oportunidades.html">Oportunidades</a>
-<a href="educacao.html">Educação</a>
-<a href="tecnologia-ia.html">Tecnologia & IA</a>
-<a href="dinheiro-negocios.html">Dinheiro & Negócios</a>
-<button id="alternarTema" class="botao-tema" type="button" aria-label="Ativar modo escuro">◐</button>
-</nav>
+    <!-- ==========================================
+         CABEÇALHO
+         ========================================== -->
 
-<main>
+    <header>
 
-<section class="pesquisa">
-    <label class="sr-only" for="campoPesquisa">Pesquisar conteúdos</label>
-    <input
-        type="text"
-        id="campoPesquisa"
-        placeholder="Pesquisar por tema, palavra ou categoria..."
-        autocomplete="off"
-    >
+        <h1>🌍 MozHub</h1>
 
-    <button id="botaoPesquisa" type="button">
-        Pesquisar
-    </button>
-</section>
+        <p>
+            Conhecimento útil para aprender, crescer e encontrar novas oportunidades.
+        </p>
 
-<section id="resultados" aria-live="polite"></section>
+    </header>
 
-<section class="destaque" id="conteudos">
 
-    <div class="titulo-secao">
-        <div>
-            <p class="eyebrow">ESCOLHA O SEU PRÓXIMO PASSO</p>
-            <h2>Conteúdos em destaque</h2>
-        </div>
-        <p class="contador">4 áreas para aprender, aplicar e avançar.</p>
-    </div>
 
-        <div class="cartoes">
+    <!-- ==========================================
+         NAVEGAÇÃO
+         ========================================== -->
 
-            <article>
-                <img class="imagem-cartao" src="oportunidades.jpg" alt="Pessoa a pesquisar oportunidades num computador" loading="lazy">
-                <div class="conteudo-cartao">
-                    <span class="etiqueta-cartao">CARREIRA</span>
-                    <h3>Oportunidades</h3>
-                    <p>Encontre vagas, bolsas, estágios e cursos com um método simples para pesquisar, verificar e candidatar-se.</p>
-                    <div class="mini-demonstracao" aria-label="Exemplo de pesquisa de oportunidade">
-                        <span>🔎 estágio</span><span>📍 Moçambique</span><span>✓ fonte oficial</span>
-                    </div>
-                    <p class="exemplo-cartao"><strong>Exemplo:</strong> transforme “quero emprego” em “estágio de informática em Maputo 2026”.</p>
-                    <a href="artigo.html?id=1">Ver guia completo <span aria-hidden="true">→</span></a>
-                </div>
-            </article>
+    <nav>
 
-            <article>
-                <img class="imagem-cartao" src="programacao.jpg" alt="Estudante a aprender programação num laptop" loading="lazy">
-                <div class="conteudo-cartao">
-                    <span class="etiqueta-cartao">APRENDIZAGEM</span>
-                    <h3>Educação</h3>
-                    <p>Recursos para estudar melhor, aprender novas habilidades e transformar conhecimento em projectos.</p>
-                    <div class="mini-demonstracao passos" aria-label="Exemplo de rotina de estudo">
-                        <span>1. Entender</span><span>2. Praticar</span><span>3. Rever</span>
-                    </div>
-                    <p class="exemplo-cartao"><strong>Exemplo:</strong> estude HTML, crie uma página e explique com as suas palavras o que construiu.</p>
-                    <a href="artigo.html?id=2">Começar a aprender <span aria-hidden="true">→</span></a>
-                </div>
-            </article>
+        <a href="index.html">
+            Início
+        </a>
 
-            <article>
-                <img class="imagem-cartao" src="ia-estudantes.jpg" alt="Estudante a usar inteligência artificial para estudar" loading="lazy">
-                <div class="conteudo-cartao">
-                    <span class="etiqueta-cartao">INOVAÇÃO</span>
-                    <h3>Tecnologia & IA</h3>
-                    <p>Descubra ferramentas digitais, programação e inteligência artificial para resolver problemas reais.</p>
-                    <div class="mini-demonstracao codigo" aria-label="Exemplo de pedido à inteligência artificial">
-                        <span>Contexto</span><b>+</b><span>Objectivo</span><b>+</b><span>Prática</span>
-                    </div>
-                    <p class="exemplo-cartao"><strong>Exemplo:</strong> peça uma explicação simples, tente sozinho e use a IA apenas para corrigir o seu erro.</p>
-                    <a href="artigo.html?id=3">Explorar tecnologia <span aria-hidden="true">→</span></a>
-                </div>
-            </article>
+        <a href="oportunidades.html">
+            Oportunidades
+        </a>
 
-            <article>
-                <img class="imagem-cartao" src="negocios.jpg" alt="Empreendedor a planear um pequeno negócio" loading="lazy">
-                <div class="conteudo-cartao">
-                    <span class="etiqueta-cartao">ACÇÃO</span>
-                    <h3>Dinheiro & Negócios</h3>
-                    <p>Aprenda a testar ideias, controlar custos, encontrar clientes e tomar decisões com mais confiança.</p>
-                    <div class="mini-demonstracao financas" aria-label="Exemplo de cálculo de negócio">
-                        <span>10.000 MT receita</span><b>−</b><span>7.000 MT custos</span><b>=</b><strong>3.000 MT</strong>
-                    </div>
-                    <p class="exemplo-cartao"><strong>Exemplo:</strong> antes de investir, fale com cinco potenciais clientes e teste uma versão pequena da oferta.</p>
-                    <a href="artigo.html?id=4">Ver guia de negócios <span aria-hidden="true">→</span></a>
-                </div>
-            </article>
+        <a href="educacao.html">
+            Educação
+        </a>
 
-        </div>
+        <a href="tecnologia-ia.html">
+            Tecnologia &amp; IA
+        </a>
 
-    </section>
+        <a href="dinheiro-negocios.html">
+            Dinheiro &amp; Negócios
+        </a>
 
-</main>
+        <a href="primeiro-emprego.html">
+            Primeiro Emprego
+        </a>
 
-<footer>
-    <strong>MozHub</strong>
-    <span>Conhecimento útil para transformar ideias em ação.</span>
-</footer>
+    </nav>
 
-<script src="artigos.js"></script>
-<script src="script.js"></script>
+
+
+    <!-- ==========================================
+         CONTEÚDO PRINCIPAL
+         ========================================== -->
+
+    <main>
+
+
+        <!-- ==========================================
+             PESQUISA
+             ========================================== -->
+
+        <section class="pesquisa">
+
+            <input
+                type="text"
+                id="campoPesquisa"
+                placeholder="🔎 O que você está procurando?"
+                autocomplete="off"
+            >
+
+            <button
+                type="button"
+                id="botaoPesquisa"
+            >
+                Pesquisar
+            </button>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             RESULTADOS
+             ========================================== -->
+
+        <section id="resultados"></section>
+
+
+
+        <!-- ==========================================
+             DESTAQUES
+             ========================================== -->
+
+        <section
+            class="destaque"
+            id="destaques"
+        >
+
+            <h2>
+                🔥 Explore conhecimentos
+            </h2>
+
+
+            <div class="cartoes">
+
+
+                <!-- ==================================
+                     OPORTUNIDADES
+                     ================================== -->
+
+                <article>
+
+                    <h3>
+                        💼 Oportunidades
+                    </h3>
+
+                    <p>
+                        Aprenda a encontrar empregos, bolsas, estágios,
+                        cursos e outras oportunidades com mais segurança.
+                    </p>
+
+                    <a href="oportunidades.html">
+                        Explorar →
+                    </a>
+
+                </article>
+
+
+
+                <!-- ==================================
+                     EDUCAÇÃO
+                     ================================== -->
+
+                <article>
+
+                    <h3>
+                        📚 Educação
+                    </h3>
+
+                    <p>
+                        Descubra como aprender programação do zero,
+                        estudar melhor e desenvolver novas competências.
+                    </p>
+
+                    <a href="educacao.html">
+                        Explorar →
+                    </a>
+
+                </article>
+
+
+
+                <!-- ==================================
+                     TECNOLOGIA & IA
+                     ================================== -->
+
+                <article>
+
+                    <h3>
+                        🤖 Tecnologia &amp; IA
+                    </h3>
+
+                    <p>
+                        Aprenda a usar inteligência artificial,
+                        tecnologia e ferramentas digitais de forma prática.
+                    </p>
+
+                    <a href="tecnologia-ia.html">
+                        Explorar →
+                    </a>
+
+                </article>
+
+
+
+                <!-- ==================================
+                     DINHEIRO & NEGÓCIOS
+                     ================================== -->
+
+                <article>
+
+                    <h3>
+                        💰 Dinheiro &amp; Negócios
+                    </h3>
+
+                    <p>
+                        Aprenda a validar ideias, controlar custos,
+                        definir preços, encontrar clientes e cuidar do dinheiro.
+                    </p>
+
+                    <a href="dinheiro-negocios.html">
+                        Explorar →
+                    </a>
+
+                </article>
+
+
+
+                <!-- ==================================
+                     PRIMEIRO EMPREGO
+                     ================================== -->
+
+                <article>
+
+                    <h3>
+                        🚀 Primeiro Emprego
+                    </h3>
+
+                    <p>
+                        Descubra como construir competências, criar projetos,
+                        preparar currículo, candidatar-se e enfrentar entrevistas
+                        mesmo sem experiência profissional.
+                    </p>
+
+                    <a href="primeiro-emprego.html">
+                        Explorar →
+                    </a>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             CHAMADA PARA CONTINUAR
+             ========================================== -->
+
+        <section class="proximo-conteudo">
+
+            <h3>
+                💡 Não encontrou o que procura?
+            </h3>
+
+            <p>
+                Pesquise acima. O MozHub foi criado para transformar
+                dúvidas em conhecimento útil e aplicável.
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==========================================
+         RODAPÉ
+         ========================================== -->
+
+    <footer>
+
+        <p>
+            © 2026 MozHub — Conhecimento que gera oportunidades.
+        </p>
+
+    </footer>
+
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+         ========================================== -->
+
+    <script src="script.js"></script>
+
 
 </body>
+
 </html>
